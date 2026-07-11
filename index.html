@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EduPathAI — AI-powered college admission guidance for Indian students. Get personalized college recommendations, application roadmaps, and scholarship matching. Free. SDG 4 & SDG 10." />
+    <meta name="keywords" content="college admission India, JEE, NEET, MHT-CET, AI college counselor, college guidance India, scholarship finder" />
+    <meta name="theme-color" content="#6C3CE9" />
+    <meta property="og:title" content="EduPathAI | AI College Navigation" />
+    <meta property="og:description" content="Your personal AI career navigator for Indian college admissions. Free, fast, and AI-powered." />
+    <title>EduPathAI | AI College Navigator</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div id="error-log" style="color: red; padding: 20px; font-family: monospace; z-index: 9999; position: relative;"></div>
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        document.getElementById('error-log').innerHTML += '<p>' + message + '</p>';
+      };
+      window.addEventListener('unhandledrejection', function(event) {
+        document.getElementById('error-log').innerHTML += '<p>' + event.reason + '</p>';
+      });
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
